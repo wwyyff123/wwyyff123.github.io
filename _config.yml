@@ -1,6 +1,6 @@
-title: WUYIFAN
+title: YIFAN'S BLOG
 subtitle: 一个不务正业的建筑师成长的心路历程
-description: 建筑,产品,互联网
+description: 建筑，产品，互联网
 keywords: null
 author: WUYIFAN
 language: zh-CN
@@ -28,7 +28,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -59,7 +59,7 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: landscape
+theme: Next
 deploy:
   type: git
   repo: https://github.com/wwyyff123/wwyyff123.github.io.git
