@@ -12,7 +12,7 @@ comments: false
 
 <center>💞️ This is just a place to record.</center>
 
-<center>🌱 I’m currently learning how to change my work to become a product manager.</center>
+<center>🌱 I’m currently learning something to become a better man.</center>
 
 ------
 

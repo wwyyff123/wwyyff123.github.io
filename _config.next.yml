@@ -640,7 +640,7 @@ valine:
   avatar: mm # gravatar style
   meta: [nick, mail, link] # Custom comment header
   pageSize: 10 # pagination size
-  visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
+  visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
   recordIP: false # Whether to record the commenter IP
 
@@ -722,7 +722,7 @@ cloudflare_analytics:
 # Show number of visitors of each article.
 # You can visit https://www.leancloud.cn to get AppID and AppKey.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: Xn8mtBnuOkyAru1S4AqIh8zd-MdYXbMMI
   app_key: APBwA1G4PEMuzOk28KillH5K
   # Required for apps from CN region
