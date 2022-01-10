@@ -77,8 +77,8 @@ passage_end_tag:
 
 leancloud_counter_security:
   enable_sync: true
-  app_id: rmzvWS86nvWAOS4OCd0SAOM5-gzGzoHsz
-  app_key: uYHM95KrYjOhGlB5oSBlXowR
+  app_id: Xn8mtBnuOkyAru1S4AqIh8zd-MdYXbMMI
+  app_key: APBwA1G4PEMuzOk28KillH5K
   username: wwyyff123@foxmail.com # Will be asked while deploying if is left blank
   password: lxSS05873041 # Recommmended to be left blank. Will be asked while deploying if is left blank
 

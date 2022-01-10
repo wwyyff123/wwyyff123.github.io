@@ -209,7 +209,7 @@ footer:
   copyright: WUYIFAN
 
   # Powered by Hexo & NexT
-  powered: false
+  powered: true
 
   # Beian ICP and gongan information for Chinese users. See: https://beian.miit.gov.cn, http://www.beian.gov.cn
   beian:
@@ -628,12 +628,38 @@ gitalk:
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language:
-    - en
-    - zh-CN
-    - en-ES
-    - fr
-    - ru
-    - zh-TW
+
+# Valine
+# For more information: https://valine.js.org, https://github.com/xCss/Valine
+valine:
+  enable: true
+  appId: wPrszNYA3i4JsK2AyjxyYGSg-MdYXbMMI  # your leancloud application appid
+  appKey: WFawPNxzuykOJn93wBstwoGj  # your leancloud application appkey
+  serverURLs: https://wprsznya.api.lncldglobal.com # When the custom domain name is enabled, fill it in here
+  placeholder: 说点什么吧~ # comment box placeholder
+  avatar: mm # gravatar style
+  meta: [nick, mail, link] # Custom comment header
+  pageSize: 10 # pagination size
+  visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
+  comment_count: true # If false, comment count will only be displayed in post page, not in home page
+  recordIP: false # Whether to record the commenter IP
+
+# Waline
+# For more information: https://waline.js.org, https://github.com/lizheming/waline
+waline:
+  enable: false
+  serverURL: https://blog-api-lld9sbx0k-wwyyff123.vercel.app                   # Waline server address url
+  placeholder: 'Just go'                                    # Comment box placeholder
+  avatar: mm                                                # Gravatar style
+  meta: [nick, mail, link]                                  # Custom comment header
+  pageSize: 10                                              # Pagination size
+  lang: zh-cn                                               # Language, available values: en, zh-cn
+  visitor: false                                            # Article reading statistic
+  comment_count: true                                       # If false, comment count will only be displayed in post page, not in home page
+  requiredMeta: []                                          # Set required fields: [nick] | [nick, mail]
+  libUrl: //cdn.jsdelivr.net/npm/@waline/client                                                   # Set custom library cdn url
+
+
 
 
 # Utterances
@@ -697,10 +723,10 @@ cloudflare_analytics:
 # You can visit https://www.leancloud.cn to get AppID and AppKey.
 leancloud_visitors:
   enable: true
-  app_id: rmzvWS86nvWAOS4OCd0SAOM5-gzGzoHsz
-  app_key: uYHM95KrYjOhGlB5oSBlXowR
+  app_id: Xn8mtBnuOkyAru1S4AqIh8zd-MdYXbMMI
+  app_key: APBwA1G4PEMuzOk28KillH5K
   # Required for apps from CN region
-  server_url: https://yifanwoo.com/
+  server_url: https://xn8mtbnu.api.lncldglobal.com
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
@@ -762,7 +788,7 @@ local_search:
 # A button to open designated chat widget in sidebar.
 # Firstly, you need to enable and configure the chat service.
 chat:
-  enable: false
+  enable: true
   icon: fa fa-comment # Icon name in Font Awesome, set false to disable icon.
   text: Chat # Button text, change it as you wish.
 
@@ -770,9 +796,9 @@ chat:
 # For more information: https://chatra.com
 # Dashboard: https://app.chatra.io/settings/general
 chatra:
-  enable: false
+  enable: true
   async: true
-  id: # Visit Dashboard to get your ChatraID
+  id: uehZDGKebadRWMMKx # Visit Dashboard to get your ChatraID
   #embed: # Unfinished experimental feature for developers. See: https://chatra.com/help/api/#injectto
 
 # Tidio Support
@@ -901,3 +927,4 @@ images: images
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
 rss: /atom.xml
+
