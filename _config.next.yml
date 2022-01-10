@@ -928,3 +928,9 @@ images: images
 # Set rss to specific value if you have burned your feed already.
 rss: /atom.xml
 
+ # At the end of the article, show thanks for reading
+end_info:
+  enable: true
+  start_info: -------The end of this article
+  icon: paw
+  end_info: Thank you for your reading-------
