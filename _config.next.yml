@@ -53,7 +53,7 @@ darkmode: false
 favicon:
   small: /images/16.png
   medium: /images/32.png
-  apple_touch_icon: /180.png
+  apple_touch_icon: /images/180.png
   safari_pinned_tab: /images/w.svg
   #android_manifest: /manifest.json
 
@@ -89,6 +89,7 @@ menu:
   tags: /tags/ || fa fa-tags
   categories: /categories/ || fa fa-th
   archives: /archives/ || fa fa-archive
+  guestbook: /guestbook/ || fa fa-cat
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
