@@ -1,7 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>前端学习记录（二）——Html基础结构2</title>
+    <title>前端学习记录（三）——Html基础3</title>
+    <url>/2022/01/13/20220113%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-Html%E5%9F%BA%E7%A1%803/</url>
+    <content><![CDATA[<h1 id="Html标签（二）"><a href="#Html标签（二）" class="headerlink" title="Html标签（二）"></a>Html标签（二）</h1><h2 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h2><p>table：表格整体，包裹多个tr<br>tr：表格行，包裹td<br>td：单元格，包裹内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td&gt;##&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;##&lt;/td&gt;</span><br><span class="line">        &lt;td&gt;##&lt;/td&gt;</span><br><span class="line">    &lt;/tr&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="表格属性（实际开发用CSS设置）"><a href="#表格属性（实际开发用CSS设置）" class="headerlink" title="表格属性（实际开发用CSS设置）"></a>表格属性（实际开发用CSS设置）</h3><ul>
+<li>border:边框宽度</li>
+<li>width:表格宽度</li>
+<li>height：表格高度</li>
+</ul>
+<h3 id="表格标题和表头单元格标签"><a href="#表格标题和表头单元格标签" class="headerlink" title="表格标题和表头单元格标签"></a>表格标题和表头单元格标签</h3><ul>
+<li>caption：表格大标题，顶部居中显示，放在table标签内</li>
+<li>th：表头单元格，一般为表格单元格</li>
+</ul>
+<h3 id="表格的结构标签"><a href="#表格的结构标签" class="headerlink" title="表格的结构标签"></a>表格的结构标签</h3><ul>
+<li>thead：表格头部</li>
+<li>tbody：表格主体</li>
+<li>tfoot：表格底部  </li>
+</ul>
+<div class="note danger"><p>特点：</p>
+<ul>
+<li>结构标签内包裹tr标签</li>
+<li>结构标签可以省略</li>
+</ul>
+</div>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;table border=&quot;1&quot;&gt;</span><br><span class="line">    &lt;caption&gt;&lt;strong&gt;标题&lt;/strong&gt;&lt;/caption&gt;</span><br><span class="line">    &lt;!-- thead表格头部 --&gt;</span><br><span class="line">    &lt;thead&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;th&gt;##&lt;/th&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">    &lt;/thead&gt;</span><br><span class="line">    &lt;!-- 表格主体 --&gt;</span><br><span class="line">    &lt;tbody&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;##&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;##&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">     &lt;/tbody&gt;</span><br><span class="line">     &lt;!-- 表格底部 --&gt;</span><br><span class="line">     &lt;tfoot&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">            &lt;td&gt;##&lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">     &lt;/tfoot&gt;    </span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="合并单元格"><a href="#合并单元格" class="headerlink" title="合并单元格"></a>合并单元格</h3><p>竖向合并：rowspan，属性值表示合并个数<br>横向合并：colspan，属性值表示合并个数<br>步骤：</p>
+<ol>
+<li>合并哪几个单元格</li>
+<li>左上原则，确定保留和删除部分</li>
+<li>给保留的单元格设置rowspan或者colspan  </li>
+</ol>
+<div class="note danger"><p>特点：只能在同一个表格结构合并，不能跨结构</p>
+</div>
+
+<h2 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h2><p>使用场景：登陆/注册/搜索时使用</p>
+<h3 id="input系列"><a href="#input系列" class="headerlink" title="input系列"></a>input系列</h3><p>显示收集用户信息的表单效果  </p>
+<div class="note info"><p>type类型：</p>
+<ul>
+<li>text：文本框，单行文本</li>
+<li>password：密码框</li>
+<li>radio：单选框<ul>
+<li>name：相同属性值为一组，只能选一个</li>
+<li>cheked：默认选中</li>
+</ul>
+</li>
+<li>checkbox：多选框</li>
+<li>file：文件上传<ul>
+<li>multiple：多文件选择</li>
+</ul>
+</li>
+<li>submit：提交按钮<ul>
+<li>必须要表单域标签form</li>
+</ul>
+</li>
+<li>reset：重置按钮<ul>
+<li>必须要表单域标签form</li>
+</ul>
+</li>
+<li>button：普通按钮，配合js添加功能<ul>
+<li>可作为<button></button>双标签</li>
+</ul>
+</li>
+</ul>
+</div>  
+<p>属性placeholder：占位符，提示内容<br>属性cheked：默认选中</p>
+<h3 id="select下拉菜单"><a href="#select下拉菜单" class="headerlink" title="select下拉菜单"></a>select下拉菜单</h3><p>提供多个选项的下拉菜单  </p>
+<ul>
+<li>select:下拉整体  </li>
+<li>option：下拉菜单的每一项<ul>
+<li>selected：默认选中</li>
+</ul>
+</li>
+</ul>
+<h3 id="文本域"><a href="#文本域" class="headerlink" title="文本域"></a>文本域</h3><p>标签名：textarea<br>属性</p>
+<ul>
+<li>cols：文本域可见宽度</li>
+<li>rows：文本域可见行数</li>
+</ul>
+<h3 id="label标签"><a href="#label标签" class="headerlink" title="label标签"></a>label标签</h3><p>常用语绑定内容与表单标签的关系</p>
+<div class="note default"><ul>
+<li>使用方法①<ol>
+<li>使用label标签把内容（如文本）包裹</li>
+<li>在表单标签添加id属性</li>
+<li>在label标签的for属性中设置对应的id属性</li>
+</ol>
+</li>
+</ul>
+</div>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;nan&quot;&gt;&lt;label for=&quot;nan&quot;&gt;男&lt;/label&gt;</span><br></pre></td></tr></table></figure>
+<div class="note default"><ul>
+<li>使用方法②<ol>
+<li>直接用label把内容和表单标签一起包裹</li>
+<li>把label的for属性删除</li>
+</ol>
+</li>
+</ul>
+</div>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;&quot;&gt;女&lt;/label&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="语义化标签"><a href="#语义化标签" class="headerlink" title="语义化标签"></a>语义化标签</h2><h3 id="无语义的布局标签"><a href="#无语义的布局标签" class="headerlink" title="无语义的布局标签"></a>无语义的布局标签</h3><p>布局网页使用&lt;div&gt;和&lt;span&gt;</p>
+<ul>
+<li>div：一行只显示一个</li>
+<li>span：一行显示多个  </li>
+</ul>
+<h3 id="有语义的布局标签"><a href="#有语义的布局标签" class="headerlink" title="有语义的布局标签"></a>有语义的布局标签</h3><p>HTML5中提供开发者使用，手机网页使用较多</p>
+<div class="note info"><ul>
+<li>header：网页头部</li>
+<li>nav：网页导航</li>
+<li>footer:网页底部</li>
+<li>aside:网页侧边栏</li>
+<li>section：网页区块</li>
+<li>article：网页文章  </li>
+</ul>
+</div>
+<p><img src="https://cdn.jsdelivr.net/gh/wwyyff123/CDN/Photos/%E5%89%8D%E7%AB%AF/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE.jpg" alt="有语义标签"></p>
+<h2 id="字符实体"><a href="#字符实体" class="headerlink" title="字符实体"></a>字符实体</h2><ul>
+<li>HTML中的空格：&amp;nbsp;<br><img src="https://cdn.jsdelivr.net/gh/wwyyff123/CDN/Photos/%E5%89%8D%E7%AB%AF/%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93.jpg" alt="字符实体"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Html</category>
+        <category>基础</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端学习记录（二）——Html基础2</title>
     <url>/2022/01/12/202201112%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-Html%E5%9F%BA%E7%A1%802/</url>
     <content><![CDATA[<h1 id="Html标签（二）"><a href="#Html标签（二）" class="headerlink" title="Html标签（二）"></a>Html标签（二）</h1><hr>
 <h2 id="Html音频标签"><a href="#Html音频标签" class="headerlink" title="Html音频标签"></a>Html音频标签</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;audio src=&quot; &quot;&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure>
@@ -69,7 +199,7 @@
       </tags>
   </entry>
   <entry>
-    <title>前端学习记录（一）——Html基础结构</title>
+    <title>前端学习记录（一）——Html基础1</title>
     <url>/2022/01/11/202201111%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-Html%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="html的骨架结构"><a href="#html的骨架结构" class="headerlink" title="html的骨架结构"></a>html的骨架结构</h1><p>整体、头部、标题、主体</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;  //网页的整体</span><br><span class="line">    &lt;head&gt;  //网页的头部</span><br><span class="line">        &lt;title&gt;标题&lt;/title&gt; //网页的标题</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;  //网页的身体</span><br><span class="line">        网页主体内容</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
