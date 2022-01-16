@@ -1,6 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>前端学习记录（四）——CSS(1)</title>
+    <url>/2022/01/16/20220116%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(1)/</url>
+    <content><![CDATA[<h1 id="CSS基础"><a href="#CSS基础" class="headerlink" title="CSS基础"></a>CSS基础</h1><h2 id="CSS介绍"><a href="#CSS介绍" class="headerlink" title="CSS介绍"></a>CSS介绍</h2><div class="note default"><p>CSS：层叠样式表<br>作用：给HTML标签设置样式<br>层叠性：多行相同的属性，最后面的生效</p>
+</div>
+<h2 id="CSS语法规则"><a href="#CSS语法规则" class="headerlink" title="CSS语法规则"></a>CSS语法规则</h2><p>CSS写在style标签中，一般放在head标签里，title标签下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">选择器 &#123;属性名： 属性值;&#125;</span><br><span class="line">p &#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="CSS引入方式"><a href="#CSS引入方式" class="headerlink" title="CSS引入方式"></a>CSS引入方式</h2><h3 id="内嵌式"><a href="#内嵌式" class="headerlink" title="内嵌式"></a>内嵌式</h3><p>CSS写在style标签中：通常约定写在head标签中，小案例使用</p>
+<h3 id="外链式"><a href="#外链式" class="headerlink" title="外链式"></a>外链式</h3><p>CSS单独写在.css文件中，需要通过link标签在网页中引入，项目中常用</p>
+<h3 id="行内式"><a href="#行内式" class="headerlink" title="行内式"></a>行内式</h3><p>CSS写在标签的style属性中，常配合js使用</p>
+<h2 id="CSS基础选择器"><a href="#CSS基础选择器" class="headerlink" title="CSS基础选择器"></a>CSS基础选择器</h2><h3 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h3><p>标签名{css属性名:属性值;}<br>通过标签名，找到页面中所有这类标签设置样式  </p>
+<div class="note danger"><ol>
+<li>标签选择器选择的是一类标签，而不是一个</li>
+<li>标签选择器不管嵌套关系多深，都可以找到对应标签</li>
+</ol>
+</div>
+
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><p>.类名{css属性名:属性值;}<br>通过类名，找到页面中所有这类标签设置样式  </p>
+<div class="note danger"><ol>
+<li>通过标签的class属性定义</li>
+<li>类名由数字、字母、下划线、中划线组成，但不能以数字或中划线开头</li>
+<li>可以同时有多个类名，空格隔开</li>
+<li>类名可以重复</li>
+</ol>
+</div>
+
+<h3 id="id选择器（一般不用）"><a href="#id选择器（一般不用）" class="headerlink" title="id选择器（一般不用）"></a>id选择器（一般不用）</h3><p>#id属性值{css属性名:属性值;}<br>通过id属性值，找到页面中所有这类标签设置样式  </p>
+<div class="note danger"><ol>
+<li>所有标签都有id属性</li>
+<li>id属性在一个页面中是唯一的</li>
+<li>一个标签只能有一个id属性值</li>
+<li>一个id选择器只能选中一个标签</li>
+</ol>
+</div>
+
+<h3 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h3><p>*{css属性名:属性值；}<br>找到页面中所有标签，设置样式</p>
+<div class="note danger"><ol>
+<li>开发中使用较少</li>
+<li>局部设置相关样式（如margin和padding边距）</li>
+</ol>
+</div>
+
+<h2 id="字体和文本样式"><a href="#字体和文本样式" class="headerlink" title="字体和文本样式"></a>字体和文本样式</h2><h3 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h3><h4 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h4><p>font-size：数字+px<br>默认大小是16px</p>
+<h4 id="字体粗细"><a href="#字体粗细" class="headerlink" title="字体粗细"></a>字体粗细</h4><p>font-weight:<br>关键字  </p>
+<ul>
+<li>normal：正常</li>
+<li>bold：加粗<br>数字  </li>
+<li>400：正常</li>
+<li>700：加粗<div class="note danger"><ul>
+<li>并不是所有字体都提供了九种粗细</li>
+<li>关键字设置使用最多</li>
+</ul>
+</div>
+<h4 id="字体样式-1"><a href="#字体样式-1" class="headerlink" title="字体样式"></a>字体样式</h4>font-style:文字倾斜</li>
+<li>normal：正常</li>
+<li>italic：倾斜<h4 id="字体类型"><a href="#字体类型" class="headerlink" title="字体类型"></a>字体类型</h4>font-family:设置字体（默认字体是雅黑）</li>
+<li>具体字体：”Microsoft YaHei”,微软雅黑，宋体，黑体，宋体，楷体…</li>
+<li>字体系列：sans-serif(无衬线）、serif（衬线）、monospace（等宽）等…<h4 id="复合属性"><a href="#复合属性" class="headerlink" title="复合属性"></a>复合属性</h4>font属性连写<br>font:style weight size/line-height family;  <div class="note danger"><ul>
+<li>style和weight可省略</li>
+<li>注意字体大小和行高的覆盖问题</li>
+</ul>
+</div></li>
+</ul>
+<h3 id="文本样式"><a href="#文本样式" class="headerlink" title="文本样式"></a>文本样式</h3><h4 id="文本缩进"><a href="#文本缩进" class="headerlink" title="文本缩进"></a>文本缩进</h4><p>text-indent：</p>
+<ul>
+<li>数字+px</li>
+<li>数字+em（1em指当前标签font-size大小）：如2em缩进2个字符<h4 id="内容水平对齐方式"><a href="#内容水平对齐方式" class="headerlink" title="内容水平对齐方式"></a>内容水平对齐方式</h4>text-align：</li>
+<li>left：左对齐</li>
+<li>center：居中对齐</li>
+<li>right：右对齐  <div class="note danger"><p>text-align:center能让以下元素居中：需要给父元素设置</p>
+<ol>
+<li>文本</li>
+<li>span标签，a标签</li>
+<li>input标签，img标签</li>
+</ol>
+</div></li>
+</ul>
+<h4 id="文本修饰"><a href="#文本修饰" class="headerlink" title="文本修饰"></a>文本修饰</h4><p>text-decoration</p>
+<ul>
+<li>underline：下划线</li>
+<li>line-through：删除线</li>
+<li>overline：上划线</li>
+<li>none：无装饰线（可删除a标签下划线）</li>
+</ul>
+<h4 id="行高"><a href="#行高" class="headerlink" title="行高"></a>行高</h4><p>line-height：上间距+文本高度+下间距  </p>
+<ul>
+<li>数字+px</li>
+<li>倍数（当前标签font-size的倍数）<div class="note danger"><ol>
+<li>让单行文本垂直居中可设置line-height：文字父元素高度</li>
+<li>line-height:1  取消上下间距</li>
+</ol>
+</div></li>
+</ul>
+<h3 id="标签居中"><a href="#标签居中" class="headerlink" title="标签居中"></a>标签居中</h3><p>使div、p、h（大盒子）水平居中<br>margin:0 auto; 水平居中（左右边距为剩余边距均分）</p>
+<div class="note danger"><ul>
+<li>直接给当前元素本身设置</li>
+<li>如果盒子没有设置宽度，默认占满父元素宽度</li>
+</ul>
+</div>
+
+<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><p>父元素加入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">display: flex;</span><br><span class="line">align-items: center;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端学习记录（三）——Html基础3</title>
     <url>/2022/01/13/20220113%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-Html%E5%9F%BA%E7%A1%803/</url>
     <content><![CDATA[<h1 id="Html标签（二）"><a href="#Html标签（二）" class="headerlink" title="Html标签（二）"></a>Html标签（二）</h1><h2 id="表格标签"><a href="#表格标签" class="headerlink" title="表格标签"></a>表格标签</h2><p>table：表格整体，包裹多个tr<br>tr：表格行，包裹td<br>td：单元格，包裹内容</p>
@@ -132,7 +245,7 @@
   </entry>
   <entry>
     <title>前端学习记录（二）——Html基础2</title>
-    <url>/2022/01/12/202201112%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-Html%E5%9F%BA%E7%A1%802/</url>
+    <url>/2022/01/12/20220112%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-Html%E5%9F%BA%E7%A1%802/</url>
     <content><![CDATA[<h1 id="Html标签（二）"><a href="#Html标签（二）" class="headerlink" title="Html标签（二）"></a>Html标签（二）</h1><hr>
 <h2 id="Html音频标签"><a href="#Html音频标签" class="headerlink" title="Html音频标签"></a>Html音频标签</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;audio src=&quot; &quot;&gt;&lt;/audio&gt;</span><br></pre></td></tr></table></figure>
 <p>目前支持mp3,wav,ogg</p>
@@ -200,7 +313,7 @@
   </entry>
   <entry>
     <title>前端学习记录（一）——Html基础1</title>
-    <url>/2022/01/11/202201111%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-Html%E5%9F%BA%E7%A1%80/</url>
+    <url>/2022/01/11/20220111%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-Html%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="html的骨架结构"><a href="#html的骨架结构" class="headerlink" title="html的骨架结构"></a>html的骨架结构</h1><p>整体、头部、标题、主体</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;  //网页的整体</span><br><span class="line">    &lt;head&gt;  //网页的头部</span><br><span class="line">        &lt;title&gt;标题&lt;/title&gt; //网页的标题</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;  //网页的身体</span><br><span class="line">        网页主体内容</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
