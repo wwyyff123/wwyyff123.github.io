@@ -2872,7 +2872,7 @@ hr {
   transition: all 0.2s ease-in-out;
 }
 .links-of-author a::before {
-  background: #115cd2;
+  background: #d6444a;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
