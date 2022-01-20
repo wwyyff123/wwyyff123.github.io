@@ -3,7 +3,7 @@ subtitle: 一个不务正业的建筑师成长的心路历程
 description: 一个不务正业的建筑师成长的心路历程
 keywords: null
 author: WUYIFAN
-language: 
+language:
   - zh-CN
   - en
 timezone: Asia/Shanghai
@@ -46,7 +46,7 @@ prismjs:
   line_number: true
   tab_replace: ''
 index_generator:
-  path: '档案'
+  path: 档案
   per_page: 10
   order_by: '-date'
 default_category: uncategorized
@@ -67,21 +67,15 @@ deploy:
   repo: https://github.com/wwyyff123/wwyyff123.github.io.git
   branch: master
   repository: git@github.com:wwyyff123/wwyyff123.github.io.git
-# Extensions
-## Plugins: http://hexo.io/plugins/
 plugins: hexo-generate-feed
-
-# 文章末尾添加“本文结束”标记
 passage_end_tag:
   enabled: true
-
 leancloud_counter_security:
   enable_sync: true
   app_id: Xn8mtBnuOkyAru1S4AqIh8zd-MdYXbMMI
   app_key: APBwA1G4PEMuzOk28KillH5K
-  username: wwyyff123@foxmail.com # Will be asked while deploying if is left blank
-  password: lxSS05873041 # Recommmended to be left blank. Will be asked while deploying if is left blank
-
+  username: wwyyff123@foxmail.com
+  password: lxSS05873041
 search:
   path: search.xml
   field: post
