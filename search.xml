@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>前端学习记录（五）——CSS(3)</title>
+    <url>/2022/01/20/20220120%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(3)/</url>
+    <content><![CDATA[<h2 id="CSS特性"><a href="#CSS特性" class="headerlink" title="CSS特性"></a>CSS特性</h2><h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><div class="note info"><ul>
+<li>优先级高的选择器覆盖优先级低的选择器样式</li>
+<li>继承 &lt; 通配符选择器（*） &lt; 标签选择器（如div{}） &lt; 类选择器（.class） &lt; id选择器 &lt; 行内样式 &lt; !important</li>
+<li>!important不能提成继承的优先级，只要是继承优先级最低。</li>
+<li>实际开发不建议使用!important</li>
+</ul>
+</div>
+
+<h3 id="权重叠加计算"><a href="#权重叠加计算" class="headerlink" title="权重叠加计算"></a>权重叠加计算</h3><p>如果是复合选择器，需要通过权重叠加计算判断哪个选择器优先级最高<br>计算公式：（0，0，0，0）– (行内样式个数，ID选择器个数，类选择器个数，标签选择器个数)</p>
+<div class="note info"><ul>
+<li>按顺序比较权重大小，越靠前权重越大</li>
+<li>当第一级数字相同时再比较第二级，如果比较出来则不往后再比较</li>
+<li>如果所有数字都相同，表示优先级相同，则比较层叠性，靠下的覆盖上面的</li>
+<li>!important如果不在继承属性中，则权重最高</li>
+<li>都是继承的情况下，看父级标签的权重优先级</li>
+</ul>
+</div>
+
+<h2 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h2><h3 id="PxCook"><a href="#PxCook" class="headerlink" title="PxCook"></a>PxCook</h3><p>测量盒子模型尺寸</p>
+<div class="note info"><ul>
+<li>jpg/png图片用设计模式</li>
+<li>psd用开发模式</li>
+</ul>
+</div>
+
+<h3 id="盒子模型概念"><a href="#盒子模型概念" class="headerlink" title="盒子模型概念"></a>盒子模型概念</h3><p>页面中的每一个标签，都可以看成“盒子”，通过盒子视角更方便的进行布局<br>浏览器在渲染网页时，会将网页中的元素看作一个个矩形区域，也称之为“盒子”<br>盒子模型组成</p>
+<div class="note info"><ul>
+<li>内容区域 content</li>
+<li>内边距区域 padding</li>
+<li>边框区域 border</li>
+<li>外边距区域 margin</li>
+</ul>
+</div>
+
+<h3 id="内容区域的宽度和高度"><a href="#内容区域的宽度和高度" class="headerlink" title="内容区域的宽度和高度"></a>内容区域的宽度和高度</h3><p>利用width和height属性设置的是盒子内容（content）的尺寸</p>
+<h3 id="边框border"><a href="#边框border" class="headerlink" title="边框border"></a>边框border</h3><p>border: 10px solid red;（厚度，线型，颜色）</p>
+<ul>
+<li>solid：实线</li>
+<li>dashed：虚线</li>
+<li>dotted：点线  </li>
+</ul>
+<div class="note danger"><p>给盒子某个方向单独设置边框：border-top/bottom/left/right<br>boder会撑大盒子尺寸</p>
+</div>
+
+<h3 id="盒子的实际大小初级计算"><a href="#盒子的实际大小初级计算" class="headerlink" title="盒子的实际大小初级计算"></a>盒子的实际大小初级计算</h3><p>eg需求：盒子尺寸400*400，背景绿色，边框10px 实线 黑色</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    /* 盒子宽高=尺寸-边框尺寸*2 */</span><br><span class="line">    width: 380px;</span><br><span class="line">    height: 380px;</span><br><span class="line">    background-color: green;</span><br><span class="line">    border: 10px solid #000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>布局顺序：</p>
+<div class="note info"><ul>
+<li>从外到内，从上到下</li>
+<li>宽高–背景色（注意元素显示模式）–内容位置–文字细节</li>
+</ul>
+</div>
+
+
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo+Github 建站整理（二）：多终端同步和图床</title>
     <url>/2022/01/19/20220119Hexo+GithubP2/</url>
     <content><![CDATA[<blockquote><p>本文内容并非原创，部分内容来源于官方文档和网络，可以理解为建站之后的个人总结和整理，便于自己以后查阅。</p>

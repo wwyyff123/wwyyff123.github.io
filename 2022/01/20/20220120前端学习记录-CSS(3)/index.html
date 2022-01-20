@@ -22,25 +22,28 @@
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"wwyyff123.github.io","root":"/","images":"/images","scheme":"Mist","darkmode":false,"version":"8.9.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="一个不务正业的建筑师成长的心路历程">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YIFAN">
-<meta property="og:url" content="https://wwyyff123.github.io/archives/2022/01/page/2/index.html">
+<meta name="description" content="CSS特性&#x2F;盒子模型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端学习记录（五）——CSS(3)">
+<meta property="og:url" content="https://wwyyff123.github.io/2022/01/20/20220120%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(3)/index.html">
 <meta property="og:site_name" content="YIFAN">
-<meta property="og:description" content="一个不务正业的建筑师成长的心路历程">
+<meta property="og:description" content="CSS特性&#x2F;盒子模型">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-01-20T14:00:00.000Z">
+<meta property="article:modified_time" content="2022-01-20T14:49:52.873Z">
 <meta property="article:author" content="WUYIFAN">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://wwyyff123.github.io/archives/2022/01/page/2/">
+<link rel="canonical" href="https://wwyyff123.github.io/2022/01/20/20220120%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(3)/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2022/01/page/2/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://wwyyff123.github.io/2022/01/20/20220120%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(3)/","path":"2022/01/20/20220120前端学习记录-CSS(3)/","title":"前端学习记录（五）——CSS(3)"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | YIFAN</title>
+<title>前端学习记录（五）——CSS(3) | YIFAN</title>
   
 
 
@@ -70,7 +73,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">YIFAN</h1>
+      <p class="site-title">YIFAN</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">一个不务正业的建筑师成长的心路历程</p>
@@ -136,7 +139,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -149,6 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E7%89%B9%E6%80%A7"><span class="nav-number">1.</span> <span class="nav-text">CSS特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7"><span class="nav-number">1.1.</span> <span class="nav-text">优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%87%8D%E5%8F%A0%E5%8A%A0%E8%AE%A1%E7%AE%97"><span class="nav-number">1.2.</span> <span class="nav-text">权重叠加计算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">CSS盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PxCook"><span class="nav-number">2.1.</span> <span class="nav-text">PxCook</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E6%A6%82%E5%BF%B5"><span class="nav-number">2.2.</span> <span class="nav-text">盒子模型概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E5%8C%BA%E5%9F%9F%E7%9A%84%E5%AE%BD%E5%BA%A6%E5%92%8C%E9%AB%98%E5%BA%A6"><span class="nav-number">2.3.</span> <span class="nav-text">内容区域的宽度和高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BE%B9%E6%A1%86border"><span class="nav-number">2.4.</span> <span class="nav-text">边框border</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%92%E5%AD%90%E7%9A%84%E5%AE%9E%E9%99%85%E5%A4%A7%E5%B0%8F%E5%88%9D%E7%BA%A7%E8%AE%A1%E7%AE%97"><span class="nav-number">2.5.</span> <span class="nav-text">盒子的实际大小初级计算</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -225,93 +229,212 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 13 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://wwyyff123.github.io/2022/01/20/20220120%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(3)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.jpg">
+      <meta itemprop="name" content="WUYIFAN">
+      <meta itemprop="description" content="一个不务正业的建筑师成长的心路历程">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YIFAN">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          前端学习记录（五）——CSS(3)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+  
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2022</span>
+
+      <time title="创建时间：2022-01-20 22:00:00 / 修改时间：22:49:52" itemprop="dateCreated datePublished" datetime="2022-01-20T22:00:00+08:00">2022-01-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+        </span>
+    </span>
+
+  
+    <span id="/2022/01/20/20220120%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(3)/" class="post-meta-item leancloud_visitors" data-flag-title="前端学习记录（五）——CSS(3)" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+</div>
+
+            <div class="post-description">CSS特性/盒子模型</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="CSS特性"><a href="#CSS特性" class="headerlink" title="CSS特性"></a>CSS特性</h2><h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><div class="note info"><ul>
+<li>优先级高的选择器覆盖优先级低的选择器样式</li>
+<li>继承 &lt; 通配符选择器（*） &lt; 标签选择器（如div{}） &lt; 类选择器（.class） &lt; id选择器 &lt; 行内样式 &lt; !important</li>
+<li>!important不能提成继承的优先级，只要是继承优先级最低。</li>
+<li>实际开发不建议使用!important</li>
+</ul>
+</div>
+
+<h3 id="权重叠加计算"><a href="#权重叠加计算" class="headerlink" title="权重叠加计算"></a>权重叠加计算</h3><p>如果是复合选择器，需要通过权重叠加计算判断哪个选择器优先级最高<br>计算公式：（0，0，0，0）– (行内样式个数，ID选择器个数，类选择器个数，标签选择器个数)</p>
+<div class="note info"><ul>
+<li>按顺序比较权重大小，越靠前权重越大</li>
+<li>当第一级数字相同时再比较第二级，如果比较出来则不往后再比较</li>
+<li>如果所有数字都相同，表示优先级相同，则比较层叠性，靠下的覆盖上面的</li>
+<li>!important如果不在继承属性中，则权重最高</li>
+<li>都是继承的情况下，看父级标签的权重优先级</li>
+</ul>
+</div>
+
+<h2 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h2><h3 id="PxCook"><a href="#PxCook" class="headerlink" title="PxCook"></a>PxCook</h3><p>测量盒子模型尺寸</p>
+<div class="note info"><ul>
+<li>jpg/png图片用设计模式</li>
+<li>psd用开发模式</li>
+</ul>
+</div>
+
+<h3 id="盒子模型概念"><a href="#盒子模型概念" class="headerlink" title="盒子模型概念"></a>盒子模型概念</h3><p>页面中的每一个标签，都可以看成“盒子”，通过盒子视角更方便的进行布局<br>浏览器在渲染网页时，会将网页中的元素看作一个个矩形区域，也称之为“盒子”<br>盒子模型组成</p>
+<div class="note info"><ul>
+<li>内容区域 content</li>
+<li>内边距区域 padding</li>
+<li>边框区域 border</li>
+<li>外边距区域 margin</li>
+</ul>
+</div>
+
+<h3 id="内容区域的宽度和高度"><a href="#内容区域的宽度和高度" class="headerlink" title="内容区域的宽度和高度"></a>内容区域的宽度和高度</h3><p>利用width和height属性设置的是盒子内容（content）的尺寸</p>
+<h3 id="边框border"><a href="#边框border" class="headerlink" title="边框border"></a>边框border</h3><p>border: 10px solid red;（厚度，线型，颜色）</p>
+<ul>
+<li>solid：实线</li>
+<li>dashed：虚线</li>
+<li>dotted：点线  </li>
+</ul>
+<div class="note danger"><p>给盒子某个方向单独设置边框：border-top/bottom/left/right<br>boder会撑大盒子尺寸</p>
+</div>
+
+<h3 id="盒子的实际大小初级计算"><a href="#盒子的实际大小初级计算" class="headerlink" title="盒子的实际大小初级计算"></a>盒子的实际大小初级计算</h3><p>eg需求：盒子尺寸400*400，背景绿色，边框10px 实线 黑色</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">    /* 盒子宽高=尺寸-边框尺寸*2 */</span><br><span class="line">    width: 380px;</span><br><span class="line">    height: 380px;</span><br><span class="line">    background-color: green;</span><br><span class="line">    border: 10px solid #000;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>布局顺序：</p>
+<div class="note info"><ul>
+<li>从外到内，从上到下</li>
+<li>宽高–背景色（注意元素显示模式）–内容位置–文字细节</li>
+</ul>
+</div>
+
+
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-06T23:59:59+08:00"
-              content="2022-01-06">
-          01-06
-        </time>
-      </div>
+    
+    
+    
+    <div>
+    
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">------ 感谢您的阅读 ------</div>
+    
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/06/20220106%E5%BB%BA%E7%AD%91%E5%B8%88%E4%B8%8E%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86/" itemprop="url">
-            <span itemprop="name">建筑师与产品经理</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-06T16:54:57+08:00"
-              content="2022-01-06">
-          01-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/06/20220106/" itemprop="url">
-            <span itemprop="name">2022-01-06 记录</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2022-01-06T16:32:58+08:00"
-              content="2022-01-06">
-          01-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2022/01/06/20220105/" itemprop="url">
-            <span itemprop="name">2020-01-05 记录</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
+     
     </div>
+
+    <footer class="post-footer">
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+          <span class="icon">
+            <i class="fab fa-weixin"></i>
+          </span>
+
+          <span class="label">WeChat</span>
+        </a>
+      </div>
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
+
+          <span class="label">RSS</span>
+        </a>
+      </div>
+
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="mailto:wwyyff123@foxmail.com">
+          <span class="icon">
+            <i class="fa fa-envelope"></i>
+          </span>
+
+          <span class="label">E-Mail</span>
+        </a>
+      </div>
   </div>
-  
-  
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2022/01/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/2022/01/">1</a><span class="page-number current">2</span>
-  </nav>
+</div>
 
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/01/19/20220119Hexo+GithubP2/" rel="prev" title="Hexo+Github 建站整理（二）：多终端同步和图床">
+                  <i class="fa fa-chevron-left"></i> Hexo+Github 建站整理（二）：多终端同步和图床
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="valine-comments"></div>
 </div>
   </main>
 
@@ -387,7 +510,7 @@ setInterval("createtime()",250);
 
 
 
-<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"wPrszNYA3i4JsK2AyjxyYGSg-MdYXbMMI","appKey":"WFawPNxzuykOJn93wBstwoGj","serverURLs":"https://wprsznya.api.lncldglobal.com","placeholder":"说点什么吧~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/archives/2022/01/page/2/"}</script>
+<script class="next-config" data-name="valine" type="application/json">{"enable":true,"appId":"wPrszNYA3i4JsK2AyjxyYGSg-MdYXbMMI","appKey":"WFawPNxzuykOJn93wBstwoGj","serverURLs":"https://wprsznya.api.lncldglobal.com","placeholder":"说点什么吧~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":true,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[],"el":"#valine-comments","path":"/2022/01/20/20220120%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(3)/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.valine.el)
