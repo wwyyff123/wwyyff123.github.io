@@ -6,7 +6,7 @@
   <link href="https://wwyyff123.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyyff123.github.io/"/>
-  <updated>2022-01-20T14:49:52.873Z</updated>
+  <updated>2022-01-24T16:15:14.670Z</updated>
   <id>https://wwyyff123.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端学习记录（六）——CSS(4)</title>
+    <link href="https://wwyyff123.github.io/2022/01/24/20220124%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(4)/"/>
+    <id>https://wwyyff123.github.io/2022/01/24/20220124%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(4)/</id>
+    <published>2022-01-24T14:00:00.000Z</published>
+    <updated>2022-01-24T16:15:14.670Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><h2 id="内边距padding"><a href="#内边距padding" class="headerlink" title="内边距padding"></a>内边距padding</h2><p>padding和border一样会使盒子变大 </p><div class="note info"><ul><li>padding四个值:上 右 下 左</li><li>padding三个值:上 左右 下</li><li>padding两个值:上下 左右  </li></ul></div> <h3 id="盒子被border和padding撑大的解决方式"><a href="#盒子被border和padding撑大的解决方式" class="headerlink" title="盒子被border和padding撑大的解决方式"></a>盒子被border和padding撑大的解决方式</h3><h4 id="手动内减"><a href="#手动内减" class="headerlink" title="手动内减"></a>手动内减</h4><p>实际边距=需求边距-2*（border+padding）  </p><h4 id="自动内减"><a href="#自动内减" class="headerlink" title="自动内减"></a>自动内减</h4><p>设置属性box-sizing: border-box ; 即可自动减去</p><h2 id="外边距margin"><a href="#外边距margin" class="headerlink" title="外边距margin"></a>外边距margin</h2><div class="note info"><ul><li>margin四个值:上 右 下 左</li><li>margin三个值:上 左右 下</li><li>margin两个值:上下 左右  </li></ul></div> <h2 id="清除默认内外边距"><a href="#清除默认内外边距" class="headerlink" title="清除默认内外边距"></a>清除默认内外边距</h2><p>浏览器会给部分标签添加默认的margin和padding，如body、p、ul标签  </p><div class="note info"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div> <h2 id="版心居中"><a href="#版心居中" class="headerlink" title="版心居中"></a>版心居中</h2><p>版心：网页的有效内容  </p><div class="note info"><ul><li>magrin: 0 auto;</li><li>auto指页面总像素减去有效内容再均分</li></ul></div> <h2 id="去掉列表符号"><a href="#去掉列表符号" class="headerlink" title="去掉列表符号"></a>去掉列表符号</h2><div class="note info"><p>list-style: none;</p></div> <h2 id="盒子的外边距折叠现象"><a href="#盒子的外边距折叠现象" class="headerlink" title="盒子的外边距折叠现象"></a>盒子的外边距折叠现象</h2><h3 id="合并现象"><a href="#合并现象" class="headerlink" title="合并现象"></a>合并现象</h3><p>场景：垂直布局的块级元素，上下margin会合并，导致两者距离为margin的最大值  </p><div class="note danger"><p>解决方法：只给其中一个盒子设置margin</p></div> <h3 id="塌陷现象"><a href="#塌陷现象" class="headerlink" title="塌陷现象"></a>塌陷现象</h3><p>场景：互相嵌套的块级元素，子元素的margin-top会作用在父元素上，导致父元素一起往下移动</p><div class="note danger"><p>解决方法：</p><ul><li>给父元素设置border-top或者padding-top（分隔父子元素的margin-top）</li><li>给父元素设置overflow: hidden ;</li><li>转换成行内块display: inline-block ;</li><li>设置浮动</li></ul></div> <h2 id="行内元素的内外边距问题"><a href="#行内元素的内外边距问题" class="headerlink" title="行内元素的内外边距问题"></a>行内元素的内外边距问题</h2><p>行内元素无法通过margin和padding修改垂直位置</p><div class="note info"><ul><li>改成行内块模式</li><li>用line-height调整</li></ul></div> ]]></content>
+    
+    
+    <summary type="html">CSS盒子模型边距</summary>
+    
+    
+    
+    <category term="前端" scheme="https://wwyyff123.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="CSS" scheme="https://wwyyff123.github.io/categories/%E5%89%8D%E7%AB%AF/CSS/"/>
+    
+    
+    <category term="前端" scheme="https://wwyyff123.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>前端学习记录（五）——CSS(3)</title>
