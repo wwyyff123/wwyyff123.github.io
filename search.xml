@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>前端学习记录（七）——CSS(5)</title>
+    <url>/2022/01/25/20220125%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(5)/</url>
+    <content><![CDATA[<h1 id="CSS浮动"><a href="#CSS浮动" class="headerlink" title="CSS浮动"></a>CSS浮动</h1><h2 id="结构伪类选择器"><a href="#结构伪类选择器" class="headerlink" title="结构伪类选择器"></a>结构伪类选择器</h2><p>作用：利用元素在html中的结构关系查找元素<br>优势：减少对于html中类的依赖，有利于保持代码整洁<br>场景：常用语查找某父级选择器中的子元素  </p>
+<div class="note info"><ul>
+<li>E:fitst-child {}：匹配父元素中第一个子元素，并且是E元素</li>
+<li>E:last_child {}：匹配父元素中最后一个子元素，并且是E元素</li>
+<li>E:nth-child(n) {}：匹配父元素中第n子元素，并且是E元素</li>
+<li>E:nth-last-child(n) {}：匹配父元素中倒数第n个子元素，并且是E元素  </li>
+</ul>
+</div>  
+<p>注意：n可以为整数，也可以为公式：</p>
+<ul>
+<li>偶数：2n、even</li>
+<li>奇数：2n+1、2n-1、odd</li>
+<li>前m个：-n+m</li>
+<li>第m个往后：n+m</li>
+</ul>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><p>由CSS模拟的标签效果叫伪元素<br>一般页面中的非主体内容可以用伪元素  </p>
+<div class="note info"><p>种类：</p>
+<ul>
+<li>::before 在父元素内容的最前添加一个伪元素</li>
+<li>::after 在父元素内容的最后添加一个伪元素</li>
+</ul>
+</div>  
+<div class="note danger"><p>注意：</p>
+<ul>
+<li>必须设置content属性才能生效</li>
+<li>伪元素默认是行内元素</li>
+</ul>
+</div>
+
+<h2 id="标准流"><a href="#标准流" class="headerlink" title="标准流"></a>标准流</h2><p>标准流又称文档流，是浏览器在渲染网页内容时默认采用的一套排版规则，规定了应该以何种方式排列元素  </p>
+<div class="note info"><p>常见的标准流排版规则：</p>
+<ul>
+<li>块级元素：从上往下，垂直布局，独占一行</li>
+<li>行内元素或行内块元素：从左往右，水平布局，空间不够自动换行</li>
+</ul>
+</div>
+
+<h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><h3 id="浮动的作用"><a href="#浮动的作用" class="headerlink" title="浮动的作用"></a>浮动的作用</h3><div class="note default"><p>浏览器解析行内块或者行内标签的时候，如果标签换行书写会产生一个空格的距离，为了避免这种现象必须同行书写</p>
+</div>
+<p>早期作用：图文环绕效果<br>现在作用：网页布局（块在一行排列）</p>
+<h3 id="浮动的代码"><a href="#浮动的代码" class="headerlink" title="浮动的代码"></a>浮动的代码</h3><ul>
+<li>float:left; 靠左</li>
+<li>float:right; 靠右</li>
+</ul>
+<h3 id="浮动的特点"><a href="#浮动的特点" class="headerlink" title="浮动的特点"></a>浮动的特点</h3><ul>
+<li>浮动的元素会脱离标准流（脱标），在标准流中不占位置</li>
+<li>浮动元素比标准流高半个级别，可以覆盖标准流中的元素，但是不能覆盖文字（文字环绕）</li>
+<li>浮动找浮动，下一个浮动的元素会在上一个浮动元素的左右排列</li>
+<li>浮动元素有特殊的显示效果：一行可以显示多个，并且可以设置宽高</li>
+<li>浮动的元素不能通过text-align或者margin:0 auto设置居中</li>
+</ul>
+<h3 id="CSS书写顺序"><a href="#CSS书写顺序" class="headerlink" title="CSS书写顺序"></a>CSS书写顺序</h3><p>使浏览器执行效率变高</p>
+<div class="note info"><ol>
+<li>浮动 / display</li>
+<li>盒子模型属性：margin、border、padding，宽高背景色</li>
+<li>文字样式</li>
+</ol>
+</div>]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端学习记录（六）——CSS(4)</title>
     <url>/2022/01/24/20220124%E5%89%8D%E7%AB%AF%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95-CSS(4)/</url>
     <content><![CDATA[<h1 id="CSS盒子模型"><a href="#CSS盒子模型" class="headerlink" title="CSS盒子模型"></a>CSS盒子模型</h1><h2 id="内边距padding"><a href="#内边距padding" class="headerlink" title="内边距padding"></a>内边距padding</h2><p>padding和border一样会使盒子变大 </p>
