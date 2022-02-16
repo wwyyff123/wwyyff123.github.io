@@ -6,7 +6,7 @@
   <link href="https://wwyyff123.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyyff123.github.io/"/>
-  <updated>2022-02-09T08:14:41.148Z</updated>
+  <updated>2022-02-16T15:00:20.351Z</updated>
   <id>https://wwyyff123.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML中img标签出现的默认间距问题</title>
+    <link href="https://wwyyff123.github.io/2022/02/16/20220216img%E6%A0%87%E7%AD%BE%E9%97%B4%E8%B7%9D/"/>
+    <id>https://wwyyff123.github.io/2022/02/16/20220216img%E6%A0%87%E7%AD%BE%E9%97%B4%E8%B7%9D/</id>
+    <published>2022-02-16T15:00:00.000Z</published>
+    <updated>2022-02-16T15:00:20.351Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><div class="note info"><p>图片文字等inline元素默许是和父级元素的baseline对齐的，而baseline又和父级底边有必定间隔（这个间隔和 font-size，font-family 相关）</p></div><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>设置图片父级元素font-size: 0</p><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>设置 vertical-align:top/bottom/text-top/text-bottom都可解决</p>]]></content>
+    
+    
+    <summary type="html">在练习css布局时发现li标签下的img和其他元素之间存在默认的间距</summary>
+    
+    
+    
+    <category term="前端" scheme="https://wwyyff123.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="CSS" scheme="https://wwyyff123.github.io/categories/%E5%89%8D%E7%AB%AF/CSS/"/>
+    
+    
+    <category term="前端" scheme="https://wwyyff123.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>返工啦返工啦</title>
